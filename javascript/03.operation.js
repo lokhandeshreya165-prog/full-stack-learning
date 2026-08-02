@@ -14,8 +14,9 @@ console.log(4%2);     //mod-div
 
 let str1 = "hello"
 let str2 = " shreya"
-let str3 = str1 + str2
-console.log(str3);         // hello shreya
+let str3 = " Lokhande"
+let str4 = str1 + str2 + str3
+console.log(str4);         // hello shreya Lokhande
 
 console.log("1" + "3");  // 13
 console.log("1" + 2);    //12
@@ -32,9 +33,9 @@ num1 = num2 = num3 = 9
 console.log(num2);   // 9
 
 
-let gameCounter = 100
-++gameCounter;
-console.log(gameCounter); //101
+// let gameCounter = 100
+// ++gameCounter;
+// console.log(gameCounter); //101
 
 let gameCounter = 100
 --gameCounter;
