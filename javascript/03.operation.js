@@ -1,7 +1,7 @@
 let value = 3
 let negValue = -value
-console.log(value);
-console.log(negValue);
+console.log(value);  //3
+console.log(negValue);  // -3
 
 console.log(4+4);     //add
 console.log(4-2);     //sub
@@ -11,7 +11,7 @@ console.log(4/2);     //div
 console.log(4%2);     //mod-div
 
  //* string operation *//
- 
+
 let str1 = "hello"
 let str2 = " shreya"
 let str3 = str1 + str2
