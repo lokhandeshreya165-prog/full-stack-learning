@@ -33,9 +33,9 @@ num1 = num2 = num3 = 9
 console.log(num2);   // 9
 
 
-// let gameCounter = 100
-// ++gameCounter;
-// console.log(gameCounter); //101
+let gameCounter = 100
+++gameCounter;
+console.log(gameCounter); //101
 
 let gameCounter = 100
 --gameCounter;
