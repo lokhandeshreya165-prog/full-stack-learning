@@ -34,3 +34,22 @@ let myobj = {
 const myfun = function(){
     console.log("shreya");
 }
+
+/***********************/
+//stack-memory = primitive datatype
+//heap-memory = non-primitive datatype
+
+let myname = "shreya"
+let anothername = myname
+anothername = "SVL"
+console.log(anothername);
+console.log(myname);
+
+let user1 = {
+    email: "shreya@gmail.com",
+    upiid:"shreya123"
+}
+let user2 = user1
+user2.email = " shrey678@gmail.com"
+console.log(user1.email);
+console.log(user2.email);
