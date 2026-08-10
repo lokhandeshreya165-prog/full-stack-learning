@@ -24,4 +24,4 @@ console.log(name1.trim());     // trim remove the space
 const url = "http://shreya.com/shreya165lokhande"
 console.log(url.replace('165','-'));  // it used for replaced 1st is existed val ans 2nd is replaced value
 console.log(url.includes('shreya'));    //includes-- used for find the value hai aya nahi give o/p as true
-console.log(url.split('/'));
+console.log(url.split('/'));   // split-- convert the str into array based on any var or space
