@@ -16,7 +16,10 @@ const score4 = 25000000
 console.log(score4.toLocaleString());  // o/p = 25,000,000 -- without any thing
 console.log(score4.toLocaleString('en-IN'));  //o/p = 2,50,00,000 
 
+
+
 //********* Math *************/
+
 console.log(Math);      // it is an object in which having diff labrary
 console.log(Math.abs(-5))  //give 5  -- change value
 console.log(Math.abs(5));  // give 5
@@ -32,5 +35,5 @@ console.log((Math.random()* 10 ) + 1);  // give --//-- 1 to 9
 
 const min = 10
 const max = 20
-console.log(Math.floor(Math.random()*(max-min+1)) + min); // it give  value range in beetween
+console.log(Math.floor(Math.random()*(max-min+1)) + min); // it give  value range in between min amd max 
 
