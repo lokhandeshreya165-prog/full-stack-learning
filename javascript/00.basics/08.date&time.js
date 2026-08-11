@@ -10,7 +10,6 @@ console.log(todaydate.toLocaleString());  // 8/12/2026, 12:23:09 AM
 
 let myDate = new Date(2026, 1,23)
 console.log(myDate.toDateString());   //mon feb 23 2026
-
 let my1Date = new Date(2026, 0,23,12,13,6)
 console.log(my1Date.toLocaleString());   // 1/23/2026, 12:13:06 PM
 
