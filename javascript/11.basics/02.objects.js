@@ -52,7 +52,7 @@ obj.greeting()   //run greeting function
 obj.greeting2();  //run greeting2 function
 
 
-//**** obj-2 ***//
+//**** obj-day-2 ***//
 const temuser = {}
 temuser.id = "sat123"
 temuser.name = "satyam"
@@ -109,3 +109,21 @@ console.log(Object.entries(temuser));    //[ [ 'id', 'sat123' ], [ 'name', 'saty
 
 console.log(temuser.hasOwnProperty('name'));  //true
 console.log(temuser.hasOwnProperty('islogged'));   //false
+
+
+/******obj-day-3*****/
+const course = {
+    course_name : "Javascript",
+    price: "999",
+    course_instructor: "shreya"
+}
+
+//way 1
+const {course_name : name} = course
+console.log(name);
+
+//way 2
+const {course_name} = course
+console.log(course_name);
+
+
