@@ -56,7 +56,7 @@ const add3 = (num1, num2, num3) => (num1 + num2 + num3)
 console.log(add3(5,10,20))   //op:35
 
 
-//***********day-2**********/
+//***********day-2 : IIFE **********/
 //(IIFE) :Immediately Invoke Function Expretion//
 //IIFE -- used for avoid global scope polution
 //IIFE--code
@@ -75,7 +75,4 @@ console.log(add3(5,10,20))   //op:35
 //way-3
 ((name) => {
     console.log(`${name} code of js`);  //op:Shreya code of js
-
-})("satyam");   //op:satyam code of js
-
-
+})('satyam');   //op:satyam code of js
