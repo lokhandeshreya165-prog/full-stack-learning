@@ -27,3 +27,10 @@ while (arr < myArray.length){
     console.log(`my name is ${myArray[arr]}`);
     arr = arr + 1
 }
+
+//do-while loop
+let value = 1
+do{
+    console.log(`value is ${value}`);
+    value++
+}while (value <=10)
