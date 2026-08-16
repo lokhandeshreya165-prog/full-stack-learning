@@ -12,3 +12,18 @@ for(let i = 0; i<=10; i++){
         console.log(i + '*' + j + '=' + i*j);
     }
 }
+
+
+//while loop 
+let index1 = 0
+while (index1 <= 10){
+    console.log(`value of index is ${index1}`);
+    index1 = index1 + 2 
+}
+
+let myArray = ['shreya', 'shruti', 'sakshi']
+let arr = 0
+while (arr < myArray.length){
+    console.log(`my name is ${myArray[arr]}`);
+    arr = arr + 1
+}
