@@ -116,3 +116,64 @@ javascript, shortform is : js
 python, shortform is : py
 style, shortform is : cs
 */
+
+/*******filter*****/
+const nums = [1, 2, 3,4,5,6,7,8,9,10]
+let newNums = nums.filter((num) => num > 4)
+console.log(newNums);     //op:(6) [5, 6, 7, 8, 9, 10]
+
+//when used scope {} --write return keyword  : when we not write return it give the '[]' empty array
+newNums = nums.filter((nums) => {return nums < 5});  
+console.log(newNums);      //op:(4) [1, 2, 3, 4]
+
+
+//always scope{} write with return
+/******map *******/
+const num1 = [10,20,30,40,50,60,70,80,90]
+const newNums1 = num1.map((num) => num + 5)
+console.log(newNums1);      //op: (9) [15, 25, 35, 45, 55, 65, 75, 85, 95]
+
+
+//  chaining 
+const newNums2 = num1.map((num)=> num * 10)
+                     .map((num) => num + 10)
+                     .filter((num) => num > 400)
+console.log(newNums2);
+//op:(6) [410, 510, 610, 710, 810, 910]
+
+
+/*******reduce *********/
+const num5 = [1,2,3,4,5]
+const Total = num5.reduce(function(acc, curr){    //acc:accumilator, curr:current
+    console.log(`acc:${acc} , curr:${curr}`);
+    return acc + curr
+}, 0)       //0-- denote acc start at 0 
+console.log(Total);
+/*op:
+acc:0 , curr:1
+acc:1 , curr:2
+acc:3 , curr:3
+acc:6 , curr:4
+acc:10 , curr:5
+15
+*/
+const Total1 = num5.reduce((acc,curr) => acc+curr,0)
+console.log(Total1);    //op:15
+
+//shopping system
+const shopping =[
+    {
+        coursename:"js course",
+        price: 999
+    },
+    {
+        coursename:"html course",
+        price: 2999
+    },
+    {
+        coursename:"py course",
+        price: 5999
+    }
+]
+const Totalpay = shopping.reduce((acc,item) => acc + item.price ,0)
+console.log(Totalpay);     //op:9997
