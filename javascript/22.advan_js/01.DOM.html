@@ -46,5 +46,20 @@ const templi = document.querySelectorAll('li')    op:undefined    //save all in 
 templi         op: NodeList(3) [li, li, li]          //when call the var give store value
 templi[0].style.color = 'blue'     op: 'blue'        //hange color of text
 
+**getElementByClassName
+document.getElementsByClassName('list-item')
+op: HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+const tempclassli = document.getElementsByClassName('list-item')
+op: undefined
+tempclassli     op:HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item    //store
+
+Array.from(tempclassli)         //convert list  in-to  array
+op: (4) [li.list-item, li.list-item, li.list-item, li.list-item]
+const convertarr = Array.from(tempclassli)
+
+convertarr.forEach(function(li){
+    li.style.color = 'orange'})
+op: undefined           //for changing the colorby using for-each loop
+
 
 -->
