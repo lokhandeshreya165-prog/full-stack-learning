@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Event - html</title>
+</head>
+<body>
+    <h2>Amazing image</h2>
+    <div>
+        <ul id="images">
+            <li><img width= "200px" id = "place" src ="https://img.magnific.com/free-photo/beautiful-girl-standing-boat-looking-mountains-ratchaprapha-dam-khao-sok-national-park-surat-thani-province-thailand_335224-849.jpg?semt=ais_hybrid&w=740&q=80" alt="photo"></li>
+            <li><img width ="200px" id = "city" src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0JUjIri-Zht0xNVy87nLlykzvyLJrsneZzN0IZ9YfvaI6bMMjapMbeHA8&s=10" alt="" ></li>
+            <li><img width = "200px" id = "beauty" src ="https://www.shutterstock.com/image-photo/gorgeous-autumn-slopes-birds-eye-260nw-2495465775.jpg" alt=""></li>
+        </ul>
+    </div>
+
+
+
+</body>
+<script>
+    //onclick-event
+    // document.getElementsByID('city').onclick= function(){
+    //     alert("city clicked")
+    // }
+    //event propogation 
+    //true-event capturing   top to bottom
+
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log("clicked inside the ul");
+    },true)
+    //false-enent bubulling--inside to outside
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log(" clicked");
+    },false)
+
+    //e.preventDefault()
+    document.getElementById('city').addEventListener('click', function(e){
+        console.log("city clicked");
+        e.preventDefault();
+        e.stopPropagation();
+    },false)
+
+    document.querySelector('#images').addEventListener('click',function(e){
+        console.log(e.target.parentNode);
+        //remove method
+        let removeIt = e.target.parentNode
+        removeIt.remove();
+    },false)
+
+
+</script>
+</html>
