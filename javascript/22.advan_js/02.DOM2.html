@@ -17,23 +17,57 @@
         </div>
     </body>
     <script>
-        const parent = document.querySelector('.parent')
-        console.log(parent);
-        console.log(parent.children);
-        console.log(parent.children[1].innerHTML);
+        // const parent = document.querySelector('.parent')
+        // console.log(parent);
+        // console.log(parent.children);
+        // console.log(parent.children[1].innerHTML);
 
-        for(let i = 0; i<parent.children.length; i++){
-            console.log(parent.children[i].innerHTML);
+        // for(let i = 0; i<parent.children.length; i++){
+        //     console.log(parent.children[i].innerHTML);
+        // }
+        // parent.children[1].style.color = "orange"
+        // console.log(parent.firstElementChild);
+        // console.log(parent.lastElementChild);
+
+        // const dayone = document.querySelector('.day')
+        // console.log(dayone);
+        // console.log(dayone.parentElement);
+        // console.log(dayone.nextElementSibling);
+    
+    //topic-2-->
+        const div= document.createElement('h1')
+        console.log(div);
+        div.className = "main"
+        //create random id by own
+        div.id = Math.round(Math.random()* 10 +1)
+        div.setAttribute("title","generative title")
+        div.style.backgroundColor = "blue"
+        div.style.padding = "12px"
+        //addtext in div
+        const addtext = document.createTextNode("shreya lokhande")
+        div.appendChild(addtext)
+
+        //add created div-text in page
+        document.body.appendChild(div)
+    
+    //create and remove DOM
+        //create
+        function addLanguage(langName){
+            const li = document.createElement('li');
+            li.innerHTML = `${langName}`
+            document.querySelector('.language').
+            appendChild(li)
         }
-        parent.children[1].style.color = "orange"
-        console.log(parent.firstElementChild);
-        console.log(parent.lastElementChild);
+        addLanguage("python")
+        addLanguage("typescript")
 
-        const dayone = document.querySelector('.day')
-        console.log(dayone);
-        console.log(dayone.parentElement);
-        console.log(dayone.nextElementSibling);
+
+
+
         
+        
+
+
     </script>
 </html>
 
