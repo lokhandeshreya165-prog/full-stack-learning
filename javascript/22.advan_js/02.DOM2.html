@@ -17,22 +17,22 @@
         </div>
     </body>
     <script>
-        // const parent = document.querySelector('.parent')
-        // console.log(parent);
-        // console.log(parent.children);
-        // console.log(parent.children[1].innerHTML);
+        const parent = document.querySelector('.parent')
+        console.log(parent);
+        console.log(parent.children);
+        console.log(parent.children[1].innerHTML);
 
-        // for(let i = 0; i<parent.children.length; i++){
-        //     console.log(parent.children[i].innerHTML);
-        // }
-        // parent.children[1].style.color = "orange"
-        // console.log(parent.firstElementChild);
-        // console.log(parent.lastElementChild);
+        for(let i = 0; i<parent.children.length; i++){
+            console.log(parent.children[i].innerHTML);
+        }
+        parent.children[1].style.color = "orange"
+        console.log(parent.firstElementChild);
+        console.log(parent.lastElementChild);
 
-        // const dayone = document.querySelector('.day')
-        // console.log(dayone);
-        // console.log(dayone.parentElement);
-        // console.log(dayone.nextElementSibling);
+        const dayone = document.querySelector('.day')
+        console.log(dayone);
+        console.log(dayone.parentElement);
+        console.log(dayone.nextElementSibling);
     
     //topic-2-->
         const div= document.createElement('h1')
@@ -55,19 +55,29 @@
         function addLanguage(langName){
             const li = document.createElement('li');
             li.innerHTML = `${langName}`
-            document.querySelector('.language').
-            appendChild(li)
+            document.querySelector('.parent').appendChild(li)
         }
         addLanguage("python")
         addLanguage("typescript")
 
+        function addOptiLanguage(langName){
+            const li = document.createElement('li');
+            li.appendChild(document.createTextNode(langName));
+            document.querySelector('.parent').appendChild(li);
+        }
+        addOptiLanguage('golang');
+
+        //Edit
+        const day = document.querySelector(".day:nth-child(3)");
+        day.textContent = "holiday";     //replace : wednusday to holiday
+
+        //remove
+        const day6 = document.querySelector(".day:nth-child(6)");
+        day6.remove();      //remove saturday
 
 
 
-        
-        
-
-
+    
     </script>
 </html>
 
