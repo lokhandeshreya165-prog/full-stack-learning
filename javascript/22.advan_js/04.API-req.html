@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset ="UTF-8">
+    <title>API request learning</title>
+</head>
+<body style="background-color: aquamarine;">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae dolores quo voluptatibus deleniti, enim commodi fugit itaque animi quos quas, facere consequatur praesentium illum accusantium, quod obcaecati quia similique. A.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam doloribus corporis hic perspiciatis? Aperiam, ducimus. Nostrum cupiditate, suscipit amet, explicabo ex harum illum aliquid quas tempora error nemo, consequuntur ipsam?
+
+</body>
+<script>
+    //const reqURL = 'https://api.github.com/users/hiteshchoudhary'
+    const reqURL = 'https://api.github.com/users/lokhandeshreya165-prog'
+    const req = new XMLHttpRequest();
+    req.open('GET',reqURL)         //only take url req
+    req.onreadystatechange = function(){          //continoue state
+        console.log("req.readyState");            //op:req.readyState
+        if(req.readyState == 4){
+            const data = JSON.parse(this.responseText)      //convert string into JSON-object
+            console.log(typeof data);             //op:object --give data type
+            console.log(data.followers);         //op:6  -- give dataof follower
+        }
+    }
+    console.log("req.readyState");
+    req.send()        //send request --without this don't evalute contineous not give data of url
+
+</script>
+</html>
