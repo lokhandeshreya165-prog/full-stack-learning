@@ -1,3 +1,4 @@
+/*********this_keyword*******/
 //this. -- user for current context
 const user= {
     username : "shreya",
@@ -30,8 +31,8 @@ console.log(user1);           //op:{username: 'shreya', logincount: 5, isloggedi
 console.log(user2);         //op:User {username: 'shruti', logincount: 7, isloggedin: false}
 
 
-/********prototype**********/
-
+/********new_keyword**********/
+//new : -- for creation of new object in js
 //prototype inheritance 
 //function -referece to objetc
 function multipleBy5(num){
@@ -41,4 +42,23 @@ multipleBy5.power = 2
 console.log(multipleBy5(5));        //op:25
 console.log(multipleBy5.power);      //op:2
 console.log(multipleBy5.prototype);    //{}
+
+//2nd eg
+function createUser(username, score){
+    this.username = username
+    this.score = score
+}
+createUser.prototype.increment = function(){
+    this.score++
+}
+createUser.prototype.printMe = function(){
+    console.log(`price is ${this.score}`);
+}
+const chai = new createUser("chai", 25)
+const tea = new createUser("tea", 50)
+tea.printMe();      //op:price is 50
+
+
+
+
 
